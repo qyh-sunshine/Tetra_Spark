@@ -46,7 +46,7 @@ To quantify the improvements offered by our optimized approach in retrieving rel
 Tetra-Spark supports files in `.ts` format, which are simple ASCII files containing the explicit representation of vertices and tetrahedra
 ```
 nV mT              -  number of vertices (nV) and tetrahedra (mT)
-x_1 y1 z1 f1        -  x y z coordinates for each vertex and its field value
+x1 y1 z1 f1        -  x y z coordinates for each vertex and its field value
 x2 y2 z2 f2
 .  .  .  .
 xn yn zn fn
