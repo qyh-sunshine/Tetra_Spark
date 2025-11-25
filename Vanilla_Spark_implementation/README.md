@@ -14,7 +14,7 @@ The TopoRela_Boundary_Vanilla_Spark.ipynb, TopoRela_Coboundary_Vanilla_Spark.ipy
 * Outputs:
   - a .parquet file in Spark, which is used to store the derived DataFrame corresponding to the desired connectivity relation.
 
-## Computing topological features
+## Computing local topological features
 ### Discrete vertex distortion
 The Topo_distortion_Vanilla_Spark.ipynb is used to compute the discrete distortion for each vertex in a mesh.
 * Inputs:
@@ -35,3 +35,42 @@ The Topo_Forman_Vanilla_Spark.ipynb is used to compute the Forman gradient in a 
   - the DataFrames $DF_V$ and $DF_T$
 * Outputs:
   - a DataFrame storing critical simplices and simplex pairs in a mesh.
+
+## Computing global topological descriptors
+### Directed graphs
+The Compute_Graph_VE_Vanilla_Spark.ipynb is used to compute the directed vertex-edge graph ($G_{VE}$).
+* Inputs:
+  - the DataFrames $DF_V$ and $DF_T$
+* Outputs:
+  - a GraphFrame containing the node DataFrame and arc DataFrame.
+
+The Compute_Graph_FT_Vanilla_Spark.ipynb is used to compute the directed triangle-tetrahedron graph ($G_{FT}$).
+* Inputs:
+  - the DataFrames $DF_V$ and $DF_T$
+* Outputs:
+  - a GraphFrame containing the node DataFrame and arc DataFrame.
+ 
+### Morse manifolds
+The Compute_A3_Vanilla_Spark.ipynb is used to compute the ascending 3-manifolds.
+* Inputs:
+  - the DataFrames $DF_V$ and $DF_T$
+* Outputs:
+  - a DataFrame storing ascending 3-manifolds of each critical vertex as a connected component.
+
+The Compute_D1_Vanilla_Spark.ipynb is used to compute the descending 1-manifolds.
+* Inputs:
+  - the output of Compute_A3_Vanilla_Spark.ipynb, which is the connected components corresponding to ascending 3-manifolds
+* Outputs:
+  - a DataFrame storing descending 1-manifolds connecting critical vertices and critical edges.
+
+The Compute_D3_Vanilla_Spark.ipynb is used to compute the descending 3-manifolds.
+* Inputs:
+  - the DataFrames $DF_V$ and $DF_T$
+* Outputs:
+  - a DataFrame storing descending 3-manifolds of each critical tetrahedron as a connected component.
+
+The Compute_A1_Vanilla_Spark.ipynb is used to compute the ascending 1-manifolds.
+* Inputs:
+  - the output of Compute_D3_Vanilla_Spark.ipynb, which is the connected components corresponding to descending 3-manifolds
+* Outputs:
+  - a DataFrame storing ascending 1-manifolds connecting critical tetrahedra and critical triangles.
