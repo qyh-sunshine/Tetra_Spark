@@ -40,6 +40,8 @@ To quantify the improvements offered by our optimized approach in retrieving rel
   - An example involving both boundary and coboundary relations involving vertices (VT, VF, VV, and TE).
 + Forman gradient
   - A more demanding example with both boundary and coboundary relations (VT, VF, VE, EF, FT).
++ Morse manifolds
+  - A more complicated example which involves traversing the mesh across multiple partitions.
 
 ### Supported File Formats ###
 
