@@ -53,7 +53,7 @@ The Compute_Graph_FT_Tetra_Spark.ipynb is used to compute the directed triangle-
 ### Morse manifolds
 The Compute_A3_Tetra_Spark.ipynb is used to compute the ascending 3-manifolds.
 * Inputs:
-  - the DataFrames $DF_V$ and $DF_T$
+  - the constructed graph $G_{VE}$.
 * Outputs:
   - a DataFrame storing ascending 3-manifolds of each critical vertex as a connected component.
 
@@ -65,7 +65,7 @@ The Compute_D1_Tetra_Spark.ipynb is used to compute the descending 1-manifolds.
 
 The Compute_D3_Tetra_Spark.ipynb is used to compute the descending 3-manifolds.
 * Inputs:
-  - the DataFrames $DF_V$ and $DF_T$
+  - the constructed graph $G_{FT}$.
 * Outputs:
   - a DataFrame storing descending 3-manifolds of each critical tetrahedron as a connected component.
 
